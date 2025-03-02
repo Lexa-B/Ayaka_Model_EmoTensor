@@ -154,17 +154,17 @@ with open("TEST-EmoTensor.etsc", "r") as f:
 
     # Add the transient ID to the EmoTensor order_5_transients list
     if len(EmoTensor.order_5_transients) == 0:
-        next_transient = "c_0_0_0" # If there are no transients, start at 0
+        next_transient = f"c_0_0_0+{datetime.now().isoformat()}" # If there are no transients, start at 0
     else:
         last_transient = EmoTensor.order_5_transients[-1]
         last_segment = last_transient.split('_')[-1]
         try:
             last_number = base32_crockford.decode(last_segment)
             next_number = last_number + 1
-            next_transient = f"c_0_0_{base32_crockford.encode(next_number)}"
+            next_transient = f"c_0_0_{base32_crockford.encode(next_number)}+{datetime.now().isoformat()}"
         except ValueError:
             # If we can't decode the last segment, start a new sequence
-            next_transient = "c_0_0_0"
+            next_transient = f"c_0_0_0+{datetime.now().isoformat()}"
     EmoTensor.order_5_transients.append(next_transient)
 
 with open("TEST-EmoTensor.etsc", "w") as f:
