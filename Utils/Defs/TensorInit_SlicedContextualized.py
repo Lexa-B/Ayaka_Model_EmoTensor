@@ -39,7 +39,7 @@ def TensorInit_SlicedContextualized(ConversationUsers: List[dict], EmoDescFile: 
 
     
     NewTensor = EmoTensorFull_CTXD(
-        version="v0.0.1-EmoTensor Sliced Contextualized",
+        version="v0.0.2-EmoTensor Sliced Contextualized",
         order_1_attributes=O1_Attributes,
         order_2_emotions=O2_Emotions,
         order_3_target=O3_Target,

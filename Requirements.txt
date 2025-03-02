@@ -2,3 +2,5 @@ pydantic==2.10.6
 setuptools==75.8.2
 lxml==5.3.1
 requests==2.32.3
+datetime==5.5
+base32_crockford==0.3.0

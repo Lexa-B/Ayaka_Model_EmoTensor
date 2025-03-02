@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="ayaka-models-emotensor",
-    version="0.0.1",
+    version="0.0.2",
     author="Lexa-B",
     description="Emotional Tensor Models for Ayaka AI",
     long_description=long_description,

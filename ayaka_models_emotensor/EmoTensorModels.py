@@ -1,10 +1,11 @@
 from pydantic import BaseModel
 from typing import Literal, Optional, List
+from datetime import datetime
 
 ################################################################################
 ## Configuration
 
-EmoTensorVersion = "v0.0.1-EmoTensor Sliced Contextualized"
+EmoTensorVersion = "v0.0.2-EmoTensor Sliced Contextualized"
 
 ################################################################################
 ## EmoTensor File Types
@@ -12,7 +13,7 @@ EmoTensorVersion = "v0.0.1-EmoTensor Sliced Contextualized"
 # EmoTensor files can be:
 #  * .etur - EmoTensor Unsliced Raw
 #  * .etuu - EmoTensor Unsliced Unicode
-#  * .etsu - EmoTensor Sliced Unicode (uncontextualized)
+#  * .etsu - EmoTensor Sliced Unicode
 #  * .etsc - EmoTensor Sliced Contextualized
 
 ################################################################################
@@ -71,6 +72,7 @@ class EmoTensor3DSlice_uCTXD(BaseModel): # Uncontextualized 3-dimensional (inter
     targets: List[EmoTensor2DSlice_uCTXD]
 
 class EmoTensor4DSlice_CTXD(BaseModel): # Contextualized 4-dimensional (personal emotion state transient: for one moment in time; person 1, person 2,..., person N) EmoTensor with Context
+    timestamp: datetime
     message: str
     speaker_user: str  # Format: "uid=X"
     emotional_context: str
