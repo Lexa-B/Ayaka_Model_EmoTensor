@@ -7,7 +7,7 @@ Emotion Tensor Models for Ayaka
 You can install this package directly from GitHub using pip:
 
 ```bash
-pip install git+https://github.com/Lexa-B/Ayaka_Model_EmoTensor.git
+pip install git+https://github.com/Lexa-B/Ayaka_Models_EmoTensor.git
 ```
 
 ## Usage
