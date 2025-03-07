@@ -1,4 +1,4 @@
-# Ayaka Model EmoTensor
+# Ayaka Models EmoTensor
 
 Emotion Tensor Models for Ayaka
 
