@@ -10,7 +10,7 @@ setup(
     description="Emotional Tensor Models for Ayaka AI",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Lexa-B/Ayaka_Model_EmoTensor",
+    url="https://github.com/Lexa-B/Ayaka_Models_EmoTensor",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
